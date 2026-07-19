@@ -17,7 +17,7 @@ if st.button("Ask Compass") and user_input:
     with st.spinner("Thinking..."):
         prompt = f"You are Compass, a helpful multilingual assistant for FIFA World Cup 2026 stadium visitors. Answer in {language}. Help with navigation, seating, facilities, transportation, and general stadium information.\n\nUser question: {user_input}"
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-flash-latest",
             contents=prompt
         )
         st.write(response.text)
